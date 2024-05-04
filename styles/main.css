@@ -1,0 +1,131 @@
+* {
+  font-family: roboto;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: righteous;
+  font-size: 44px;
+  font-weight: normal;
+  color: white;
+}
+
+h2 {
+  font-family: righteous;
+  font-size: 26px;
+  font-weight: normal;
+  color: #333333;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 92px;
+  padding: 0px 20px;
+  background-color: #CF2B2B;
+  box-shadow: 0px 4px 4px 0px #00000040;
+
+  p {
+    font-size: 18px;
+    color: white;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  width: 100%;
+  height: 100%;
+  padding: 122px 20px;
+  background-color: #eeeeee;
+
+  p {
+    font-size: 14px;
+    color: #a6a6a6;
+  }
+  span {
+    font-size: 16px;
+  }
+  img {
+    width: 144px;
+    border-radius: 4px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  .menu-options {
+    display: flex;
+    column-gap: 15px;
+    margin: 0 -20px;
+    padding: 0 20px;
+    overflow-x: scroll;
+    .menu-option {
+      display: flex;
+      flex-direction: column;
+      width: 172px;
+      padding: 18px 14px;
+      row-gap: 8px;
+      border-radius: 9px;
+      background-color: white;
+      .option-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 19px;
+      }
+    }
+  }
+}
+
+ion-icon {
+  color: green;
+  margin-right: -3px;
+  font-size: 19px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 92px;
+  padding: 0px 20px;
+  background-color: white;
+  button {
+    width: 364px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background-color: #cbcbcb;
+    font-size: 20px;
+    color: white;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.green-shadow {
+  box-shadow: 0px 0px 0px 5px #32B72F inset;
+}
+
+.green-color {
+  background-color: #32B72F;
+  font-weight: 700;
+}
