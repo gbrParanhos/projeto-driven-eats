@@ -17,6 +17,7 @@ let selectedDrinkPrice = null;
 let selectedDessert = null;
 let selectedDessertName = null;
 let selectedDessertPrice = null;
+let formatedTotalPrice = null;
 let countDish = null;
 let countDrink = null;
 let countDessert = null;
@@ -112,11 +113,11 @@ function checkOptions () {
 
 function calculateTotal () {
   let orderTotalPrice = order.querySelector('.total-price');
-  let formatedDishPrice = Number(selectedDishPrice.innerHTML.replace("R$ ", "").replace(",", "."));
-  let formatedDrinkPrice = Number(selectedDrinkPrice.innerHTML.replace("R$ ", "").replace(",", "."));
-  let formatedDessertPrice = Number(selectedDessertPrice.innerHTML.replace("R$ ", "").replace(",", "."));
+  let formatedDishPrice = Number(selectedDishPrice.innerHTML.replace('R$ ', '').replace(',', '.'));
+  let formatedDrinkPrice = Number(selectedDrinkPrice.innerHTML.replace('R$ ', '').replace(',', '.'));
+  let formatedDessertPrice = Number(selectedDessertPrice.innerHTML.replace('R$ ', '').replace(',', '.'));
   let totalPrice = (formatedDishPrice+formatedDrinkPrice+formatedDessertPrice).toFixed(2);
-  let formatedTotalPrice = `R$ ${totalPrice}`.replace(".", ",");
+  formatedTotalPrice = `R$ ${totalPrice}`.replace('.', ',');
   
   orderTotalPrice.innerHTML = formatedTotalPrice
 }
@@ -134,4 +135,16 @@ function openOrder () {
 function closeOrder () {
   overlay.classList.add('hidden');
   order.classList.add('hidden');
+}
+
+function sendOrder () {
+  let whatsappURL = 'https://wa.me//5521986166967?text='
+  let messageOrder =
+  encodeURIComponent(`Olá, gostaria de fazer o pedido:
+  - Prato: ${orderDishName.innerHTML}
+  - Bebida: ${orderDrinkName.innerHTML}
+  - Sobremesa: ${orderDessertName.innerHTML}
+  Total: ${formatedTotalPrice}`);
+
+  window.open(whatsappURL+messageOrder, '_blank');
 }

@@ -13,150 +13,150 @@
     <link rel='stylesheet' type='text/css' media='screen' href='styles/index.css'>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script defer src='main.js'></script>
-  <title>Driven Eats</title>
-</head>
-<body>
-  <main>
-    <div onclick="closeOrder()" class="overlay hidden">
-    </div>
-    <div class="order hidden">
-      <div class="order-header">
-        <h4>Confirme seu pedido</h4>
+    <title>Driven Eats</title>
+  </head>
+  <body>
+    <main>
+      <div onclick="closeOrder()" class="overlay hidden">
       </div>
-      <div class="order-content">
-        <div class="order-row dish">
-          <p class="order-name">Não selecionado</p>
-          <p class="order-price">R$ 0,00</p>
+      <div class="order hidden">
+        <div class="order-header">
+          <h4>Confirme seu pedido</h4>
         </div>
-        <div class="order-row drink">
-          <p class="order-name">Não selecionado</p>
-          <p class="order-price">R$ 0,00</p>
-        </div>
-        <div class="order-row dessert">
-          <p class="order-name">Não selecionado</p>
-          <p class="order-price">R$ 0,00</p>
-        </div>
-        <div class="order-row">
-          <h4 class="total-name">TOTAL</h4>
-          <h4 class="total-price">R$ 0,00</h4>
-        </div>
-      </div>
-      <div class="order-footer">
-        <button class="send-order">Tudo certo, pode pedir!</button>
-        <button onclick="closeOrder()" class="cancel-order">Cancelar</button>
-      </div>
-    </div>
-    <header>
-      <div class="header-title">
-        <h1>DrivenEats</h1>
-        <p>Sua comida em 6 minutos</p>
-      </div>
-    </header>
-    <section>
-      <div class="menu">
-        <h2 class="menu-title">Primeiro, seu prato</h2>
-        <div class="menu-options dish">
-          <div onclick="selectDish(this)" class="menu-option">
-            <img src="imgs/pf_frango.jpg" alt="pf_frango"></img>
-            <h3>Frango Grelhado</h3>
-            <p>Acompanha arroz, feijão, farofa e salada</p>
-            <div class="option-footer">
-              <span>R$ 22,90</span>
-              <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
-            </div>
+        <div class="order-content">
+          <div class="order-row dish">
+            <p class="order-name">Não selecionado</p>
+            <p class="order-price">R$ 0,00</p>
           </div>
-          <div onclick="selectDish(this)" class="menu-option">
-            <img src="imgs/pf_carne.jpg" alt="pf_carne"></img>
-            <h3>Bife à Cavalo</h3>
-            <p>Acompanha arroz, feijão, batata e salada</p>
-            <div class="option-footer">
-              <span>R$ 24,90</span>
-              <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
-            </div>
+          <div class="order-row drink">
+            <p class="order-name">Não selecionado</p>
+            <p class="order-price">R$ 0,00</p>
           </div>
-          <div onclick="selectDish(this)" class="menu-option">
-            <img src="imgs/pf_calabresa.png" alt="pf_calabresa"></img>
-            <h3>Calabresa Acebolada</h3>
-            <p>Acompanha arroz, feijão e aipim</p>
-            <div class="option-footer">
-              <span>R$ 19,90</span>
-              <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
-            </div>
+          <div class="order-row dessert">
+            <p class="order-name">Não selecionado</p>
+            <p class="order-price">R$ 0,00</p>
+          </div>
+          <div class="order-row">
+            <h4 class="total-name">TOTAL</h4>
+            <h4 class="total-price">R$ 0,00</h4>
           </div>
         </div>
-        
-      </div>
-      <div class="menu">
-        <h2 class="menu-title">Agora, sua bebida</h2>
-        <div class="menu-options drink">
-          <div onclick="selectDrink(this)" class="menu-option">
-            <img src="imgs/coca.png" alt="coca"></img>
-            <h3>Coquinha gelada</h3>
-            <p>Lata 350ml</p>
-            <div class="option-footer">
-              <span>R$ 6,90</span>
-              <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
-            </div>
-          </div>
-          <div onclick="selectDrink(this)" class="menu-option">
-            <img src="imgs/fanta.png" alt="fanta"></img>
-            <h3>Fanta Laranja</h3>
-            <p>Lata 350ml</p>
-            <div class="option-footer">
-              <span>R$ 7,90</span>
-              <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
-            </div>
-          </div>
-          <div onclick="selectDrink(this)" class="menu-option">
-            <img src="imgs/suco.png" alt="suco"></img>
-            <h3>Suco de Laranja</h3>
-            <p>Garrafa 500ml</p>
-            <div class="option-footer">
-              <span>R$ 9,90</span>
-              <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
-            </div>
-          </div>
+        <div class="order-footer">
+          <button onclick="sendOrder()" class="send-order">Tudo certo, pode pedir!</button>
+          <button onclick="closeOrder()" class="cancel-order">Cancelar</button>
         </div>
       </div>
-      <div class="menu">
-        <h2 class="menu-title">Por fim, sua sobremesa</h2>
-        <div class="menu-options dessert">
-          <div onclick="selectDessert(this)" class="menu-option">
-            <img src="imgs/pudim.jpg" alt="pudim"></img>
-            <h3>Pudim</h3>
-            <p>O pudim mais cremoso do Brasil</p>
-            <div class="option-footer">
-              <span>R$ 9,90</span>
-              <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+      <header>
+        <div class="header-title">
+          <h1>DrivenEats</h1>
+          <p>Sua comida em 6 minutos</p>
+        </div>
+      </header>
+      <section>
+        <div class="menu">
+          <h2 class="menu-title">Primeiro, seu prato</h2>
+          <div class="menu-options dish">
+            <div onclick="selectDish(this)" class="menu-option">
+              <img src="imgs/pf_frango.jpg" alt="pf_frango"></img>
+              <h3>Frango Grelhado</h3>
+              <p>Acompanha arroz, feijão, farofa e salada</p>
+              <div class="option-footer">
+                <span>R$ 22,90</span>
+                <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+            <div onclick="selectDish(this)" class="menu-option">
+              <img src="imgs/pf_carne.jpg" alt="pf_carne"></img>
+              <h3>Bife à Cavalo</h3>
+              <p>Acompanha arroz, feijão, batata e salada</p>
+              <div class="option-footer">
+                <span>R$ 24,90</span>
+                <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+            <div onclick="selectDish(this)" class="menu-option">
+              <img src="imgs/pf_calabresa.png" alt="pf_calabresa"></img>
+              <h3>Calabresa Acebolada</h3>
+              <p>Acompanha arroz, feijão e aipim</p>
+              <div class="option-footer">
+                <span>R$ 19,90</span>
+                <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+              </div>
             </div>
           </div>
-          <div onclick="selectDessert(this)" class="menu-option">
-            <img src="imgs/mouse.jpg" alt="mouse"></img>
-            <h3>Mousse de Maracujá</h3>
-            <p>Azedinho que é uma maravilha</p>
-            <div class="option-footer">
-              <span>R$ 8,90</span>
-              <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+          
+        </div>
+        <div class="menu">
+          <h2 class="menu-title">Agora, sua bebida</h2>
+          <div class="menu-options drink">
+            <div onclick="selectDrink(this)" class="menu-option">
+              <img src="imgs/coca.png" alt="coca"></img>
+              <h3>Coquinha gelada</h3>
+              <p>Lata 350ml</p>
+              <div class="option-footer">
+                <span>R$ 6,90</span>
+                <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+              </div>
             </div>
-          </div>
-          <div onclick="selectDessert(this)" class="menu-option">
-            <img src="imgs/brownie.jpg" alt="brownie"></img>
-            <h3>Brownie</h3>
-            <p>Que crocância!</p>
-            <div class="option-footer">
-              <span>R$ 7,90</span>
-              <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+            <div onclick="selectDrink(this)" class="menu-option">
+              <img src="imgs/fanta.png" alt="fanta"></img>
+              <h3>Fanta Laranja</h3>
+              <p>Lata 350ml</p>
+              <div class="option-footer">
+                <span>R$ 7,90</span>
+                <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+            <div onclick="selectDrink(this)" class="menu-option">
+              <img src="imgs/suco.png" alt="suco"></img>
+              <h3>Suco de Laranja</h3>
+              <p>Garrafa 500ml</p>
+              <div class="option-footer">
+                <span>R$ 9,90</span>
+                <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <footer>
-      <span class="alert-message"></span>
-      <button onclick="openOrder()" class="done">
-        Selecione os 3 itens<br />para fechar o pedido
-      </button>
-    </footer>
-  </main>
-</body>
+        <div class="menu">
+          <h2 class="menu-title">Por fim, sua sobremesa</h2>
+          <div class="menu-options dessert">
+            <div onclick="selectDessert(this)" class="menu-option">
+              <img src="imgs/pudim.jpg" alt="pudim"></img>
+              <h3>Pudim</h3>
+              <p>O pudim mais cremoso do Brasil</p>
+              <div class="option-footer">
+                <span>R$ 9,90</span>
+                <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+            <div onclick="selectDessert(this)" class="menu-option">
+              <img src="imgs/mouse.jpg" alt="mouse"></img>
+              <h3>Mousse de Maracujá</h3>
+              <p>Azedinho que é uma maravilha</p>
+              <div class="option-footer">
+                <span>R$ 8,90</span>
+                <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+            <div onclick="selectDessert(this)" class="menu-option">
+              <img src="imgs/brownie.jpg" alt="brownie"></img>
+              <h3>Brownie</h3>
+              <p>Que crocância!</p>
+              <div class="option-footer">
+                <span>R$ 7,90</span>
+                <ion-icon class="hidden" name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <span class="alert-message"></span>
+        <button onclick="openOrder()" class="done">
+          Selecione os 3 itens<br />para fechar o pedido
+        </button>
+      </footer>
+    </main>
+  </body>
 </html>
